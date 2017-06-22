@@ -123,8 +123,12 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> h2 = <span class="built_in">document</span>.querySelector(<span class="string">"h2"</span>); <span class="comment">//Select</span></div><div class="line"><span class="keyword">var</span> isWhite = <span class="literal">false</span>;</div><div class="line"></div><div class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">if</span> (isWhite)&#123;</div><div class="line">		h2.style.color = <span class="string">"white"</span>;</div><div class="line">	&#125;<span class="keyword">else</span> &#123;</div><div class="line">		h2.style.color = <span class="string">"black"</span>;</div><div class="line">	&#125;</div><div class="line">	isWhite = !isWhite;</div><div class="line">&#125;, <span class="number">1000</span>)</div></pre></td></tr></table></figure>
 <h3 id="DOM-Selectors"><a href="#DOM-Selectors" class="headerlink" title="DOM Selectors"></a>DOM Selectors</h3><p>The Document interface has a huge list you can use to do all kinds of things, this is just a list of the one’s I learned how to use.</p>
 <p>I can see how they can be used pretty commonly.</p>
-<p>Check out: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document" target="_blank" rel="external">MDN Document</a></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.getElementById()</div><div class="line"><span class="built_in">document</span>.getElementByClass()</div><div class="line"><span class="built_in">document</span>.getElementByTag()</div><div class="line"><span class="built_in">document</span>.querySelector()</div><div class="line"><span class="built_in">document</span>.querySelectorAll()</div></pre></td></tr></table></figure>
+<h3 id="Common-Methods-of-DOM"><a href="#Common-Methods-of-DOM" class="headerlink" title="Common Methods of DOM"></a>Common Methods of DOM</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.getElementById()</div><div class="line"><span class="built_in">document</span>.getElementByClass()</div><div class="line"><span class="built_in">document</span>.getElementByTag()</div><div class="line"><span class="built_in">document</span>.querySelector()</div><div class="line"><span class="built_in">document</span>.querySelectorAll()</div></pre></td></tr></table></figure>
+<p>To learn more about DOM check out: </p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document" target="_blank" rel="external">MDN Document</a></li>
+<li><a href="https://css-tricks.com/dom/" target="_blank" rel="external">CSS Tricks</a></li>
+</ul>
 <script>
 var h2 = document.querySelector("h2"); //Select
 var isWhite = false;
@@ -182,7 +186,7 @@ setInterval(function(){
     <h3>Recent Posts</h3>
     
         <p>
-            <a href="/2017/06/21/the-dom/">The DOM</a>
+            <a href="/2017/06/21/dom/">The DOM</a>
         </p>
     
         <p>
