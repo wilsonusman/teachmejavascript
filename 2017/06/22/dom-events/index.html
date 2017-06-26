@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Movies DB"/>
+        <meta property="og:title" content="DOM Events"/>
     
 
     <!--Open Graph Description-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>Movies DB - teachMeJavascript</title>
+    <title>DOM Events - teachMeJavascript</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
@@ -88,8 +88,8 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">Movies DB</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">June 20th 2017</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">DOM Events</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">June 22nd 2017</p>
         </div>
     </div>
 
@@ -109,24 +109,56 @@
                     
                         <div class="tags-container-vertical">
                             <div class="tags-sub-container">
-                                <a class="fw3 ph1 dib" href="/tags/javascript/">#javascript</a> <a class="fw3 ph1 dib" href="/tags/forEach/">#forEach()</a> <a class="fw3 ph1 dib" href="/tags/methods/">#methods</a>
+                                <a class="fw3 ph1 dib" href="/tags/javascript/">#javascript</a> <a class="fw3 ph1 dib" href="/tags/DOM-Events/">#DOM Events</a>
                             </div>
                         </div>
                     
 
                     <!-- Main Post Content -->
-                    <h2 id="Using-the-forEach-Method"><a href="#Using-the-forEach-Method" class="headerlink" title="Using the forEach() Method"></a>Using the forEach() Method</h2><p>I’ve been going through “The Web Developer Bootcamp” in udemy.com and this was today’s exercise.</p>
-<p>Yesterday Cole talked about the forEach() method but it didn’t click until today.</p>
-<p>In layman’s terms this forEach will callback the funtion buildString “You have…” and concat it with the properties from each movie.</p>
-<p>I’m sure as I get more advanced I will see other uses for this method.</p>
-<p>FYI You can leave comments now that I’ve fixed the disqus plugin.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> movies = [</div><div class="line">&#123;</div><div class="line">	<span class="attr">title</span>: <span class="string">"Jaws"</span>,</div><div class="line">	<span class="attr">rating</span>: <span class="number">5</span>,</div><div class="line">	<span class="attr">hasWatched</span>: <span class="literal">true</span>,</div><div class="line">&#125;,</div><div class="line">&#123;</div><div class="line">	<span class="attr">title</span>: <span class="string">"Jurassic Park"</span>,</div><div class="line">	<span class="attr">rating</span>: <span class="number">3</span>,</div><div class="line">	<span class="attr">hasWatched</span>: <span class="literal">true</span>,</div><div class="line">&#125;,</div><div class="line">&#123;</div><div class="line">	<span class="attr">title</span>: <span class="string">"Indiana Jones: Raiders Of The Lost Arc"</span>,</div><div class="line">	<span class="attr">rating</span>: <span class="number">4</span>,</div><div class="line">	<span class="attr">hasWatched</span>: <span class="literal">true</span>,</div><div class="line">&#125;,</div><div class="line">&#123;</div><div class="line">	<span class="attr">title</span>: <span class="string">"Star Wars: A New Hope"</span>,</div><div class="line">	<span class="attr">rating</span>: <span class="number">2.5</span>,</div><div class="line">	<span class="attr">hasWatched</span>: <span class="literal">false</span>,</div><div class="line">&#125;];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">buildString</span>(<span class="params">movie</span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> result = <span class="string">"You have "</span>;</div><div class="line">    <span class="keyword">if</span>(movie.hasWatched)&#123;</div><div class="line">    	result += <span class="string">"watched "</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">    	result += <span class="string">"not seen "</span>;</div><div class="line">    &#125;</div><div class="line">    result += <span class="string">"\""</span> + movie.title + <span class="string">"\" - "</span></div><div class="line">    result += movie.rating + <span class="string">" stars"</span></div><div class="line">    <span class="keyword">return</span> result;</div><div class="line">&#125;</div><div class="line"></div><div class="line">movies.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">movie</span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(buildString(movie));</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// Output</span></div><div class="line">You have watched <span class="string">"Jaws"</span> - <span class="number">5</span> stars</div><div class="line">You have watched <span class="string">"Jurassic Park"</span> - <span class="number">3</span> stars</div><div class="line">You have watched <span class="string">"Indiana Jones: Raiders Of The Lost Arc"</span> - <span class="number">4</span> stars</div><div class="line">You have not seen <span class="string">"Star Wars: A New Hope"</span> - <span class="number">2.5</span> stars</div></pre></td></tr></table></figure>
+                    <h2 id="DOM-Events"><a href="#DOM-Events" class="headerlink" title="DOM Events"></a>DOM Events</h2><p>Just a simple exercise. Whatever you do, do not click on the button!</p>
+<button>Don’t Click Me!!</button>
 
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>DOM Events - teachMeJavascript<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">h2</span>&gt;</span>DOM Events<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>blah blah blah<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">button</span>&gt;</span>Don't Click Me!!<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> button = <span class="built_in">document</span>.querySelector(<span class="string">"button"</span>);</div><div class="line"><span class="keyword">var</span> h2 = <span class="built_in">document</span>.querySelector(<span class="string">"h2"</span>);</div><div class="line"><span class="keyword">var</span> isH2 = <span class="literal">false</span>;</div><div class="line"></div><div class="line"><span class="comment">//Setup click listener</span></div><div class="line">button.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">if</span>(isH2) &#123;</div><div class="line">		h2.textContent = <span class="string">"DOM Events"</span>;</div><div class="line">	&#125; <span class="keyword">else</span> &#123;</div><div class="line">		h2.textContent = <span class="string">"I knew you couldn't resist!!"</span></div><div class="line">	&#125;</div><div class="line">	isH2 = !isH2;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="Common-Methods-of-DOM"><a href="#Common-Methods-of-DOM" class="headerlink" title="Common Methods of DOM"></a>Common Methods of DOM</h3><ul>
+<li>onclick</li>
+<li>onmouseenter</li>
+<li>onkeydown</li>
+<li>onkeypress</li>
+<li>onload</li>
+<li>onscroll</li>
+<li>onblur</li>
+<li>ondrag</li>
+<li>oncopy</li>
+<li>oncut</li>
+<li>onpaste</li>
+</ul>
+<p>More on DOM Events: </p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank" rel="external">MDN Events Reference</a></li>
+<li><a href="https://www.smashingmagazine.com/2013/11/an-introduction-to-dom-events/" target="_blank" rel="external">Smashing Magazine Intro to DOM Events</a></li>
+<li><a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html" target="_blank" rel="external">W3C</a> - Again, for the nerds</li>
+</ul>
+<script>
+var button = document.querySelector("button");
+var h2 = document.querySelector("h2");
+var isH2 = false;
+
+//Setup click listener
+button.addEventListener("click", function(){
+    if(isH2) {
+        h2.textContent = "DOM Events";
+    } else {
+        h2.textContent = "I knew you couldn't resist!!"
+    }
+    isH2 = !isH2;
+});
+</script>
                     
                     <!-- Tags Bottom -->
                     
                         <div class="tags-container-bottom">
-                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/javascript/">#javascript</a> <a class="fw3 ph1 dib" href="/tags/forEach/">#forEach()</a> <a class="fw3 ph1 dib" href="/tags/methods/">#methods</a>
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/javascript/">#javascript</a> <a class="fw3 ph1 dib" href="/tags/DOM-Events/">#DOM Events</a>
                         </div>
                     
 
