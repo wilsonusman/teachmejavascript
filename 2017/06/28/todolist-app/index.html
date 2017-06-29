@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="a site about Javascript">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Wilson Usman">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="To-Do List App"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="a site about Javascript" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="teachMeJavascript"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>To-Do List App - teachMeJavascript</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="teachMeJavascript">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="teachMeJavascript">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">To-Do List App</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">June 28th 2017</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/javascript/">#javascript</a> <a class="fw3 ph1 dib" href="/tags/todo-app/">#todo app</a> <a class="fw3 ph1 dib" href="/tags/jQuery/">#jQuery</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h2 id="A-Simple-To-Do-List-App"><a href="#A-Simple-To-Do-List-App" class="headerlink" title="A Simple To-Do List App"></a>A Simple To-Do List App</h2><p>I build this simple app with less than 150 lines of code. jQuery really makes it simple to use Javascript when you’re a total noob myself.</p>
+<p>I wouldn’t recommend you skip out in learning vanilla javascript though. Understanding the concepts of Javascript makes it simpler to understand and implement jQuery.</p>
+<style>
+
+#container body {
+  font-family: Roboto;
+  background: #43cea2;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #185a9d, #43cea2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#container h1 {
+    background: #2980b9;
+    color: white;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+#container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#container li {
+  background: #fff;
+  height: 40px;
+  line-height: 40px;
+  color: #666;
+  list-style: none;
+}
+
+#container li:hover span {
+  width: 40px;
+  opacity: 1.0;
+}
+
+
+#container li:nth-child(2n) {
+  background: #f7f7f7;
+}
+
+#container span {
+  background-color: #e74c3c;
+  height: 40px;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+  width: 0px;
+  display: inline-block;
+  transition: 0.2s linear;
+  opacity: 0;
+}
+
+#container input {
+  font-size: 18px;
+  color: #2980b9;
+  background-color: #f7f7f7;
+  width: 100%;
+  padding: 13px 13px 13px 20px;
+  box-sizing: border-box;
+  border: 3px solid rgba(0, 0, 0, 0);
+}
+
+#container input:focus{
+  background: #fff;
+  border: 3px solid #2980b9;
+  outline: none;
+}
+
+.fa-plus {
+  float: right;
+}
+
+.completed {
+  color: gray;
+  text-decoration: line-through;
+}
+
+#container {
+  width: 360px;
+  margin: 100px auto;
+  background: #f7f7f7;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+</style>
+
+<div id="container"><br>  <h1>TO-DO LIST <i class="fa fa-plus" aria-hidden="true"></i><br></h1><br>  <input type="text" placeholder="Add New Todo"><br>  <ul><br>    <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Build a todo list app</li><br>    <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Publish on my teachMeJavascript site</li><br>    <li><span><i class="fa fa-trash-o" aria-hidden="true"></i></span> Tell everyone about it</li><br>  </ul><br></div>
+
+
+<h2 id="HTML-Code"><a href="#HTML-Code" class="headerlink" title="HTML Code"></a>HTML Code</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Todo List App<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"assets/js/lib/jquery-3.2.1.min.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"https://fonts.googleapis.com/css?family=Roboto:400,500,700"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"assets/css/todos.css"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">h1</span>&gt;</span>TO-DO LIST <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-plus"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"Add New Todo"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"todo"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-trash-o"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span> Build a todo list app<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-trash-o"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span> Publish on my teachMeJavascript site<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-trash-o"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span> Tell everyone about it<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"assets/js/todos.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="CSS-Code"><a href="#CSS-Code" class="headerlink" title="CSS Code"></a>CSS Code</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">  <span class="attribute">font-family</span>: Roboto;</div><div class="line">  <span class="attribute">background</span>: <span class="number">#43cea2</span>;  <span class="comment">/* fallback for old browsers */</span></div><div class="line">  <span class="attribute">background</span>: <span class="built_in">-webkit-linear-gradient</span>(to right, #185a9d, #43cea2);  <span class="comment">/* Chrome 10-25, Safari 5.1-6 */</span></div><div class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(to right, #185a9d, #43cea2); <span class="comment">/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">h1</span> &#123;</div><div class="line">    <span class="attribute">background</span>: <span class="number">#2980b9</span>;</div><div class="line">    <span class="attribute">color</span>: white;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">20px</span>;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">24px</span>;</div><div class="line">    <span class="attribute">font-weight</span>: <span class="number">400</span>;</div><div class="line">    <span class="attribute">text-transform</span>: uppercase;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">ul</span> &#123;</div><div class="line">  <span class="attribute">list-style</span>: none;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">li</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="number">#fff</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">40px</span>;</div><div class="line">  <span class="attribute">line-height</span>: <span class="number">40px</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#666</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:hover</span> <span class="selector-tag">span</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">40px</span>;</div><div class="line">  <span class="attribute">opacity</span>: <span class="number">1.0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:nth-child(2n)</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="number">#f7f7f7</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">span</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#e74c3c</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">40px</span>;</div><div class="line">  <span class="attribute">margin-right</span>: <span class="number">20px</span>;</div><div class="line">  <span class="attribute">text-align</span>: center;</div><div class="line">  <span class="attribute">color</span>: white;</div><div class="line">  <span class="attribute">width</span>: <span class="number">0px</span>;</div><div class="line">  <span class="attribute">display</span>: inline-block;</div><div class="line">  <span class="attribute">transition</span>: <span class="number">0.2s</span> linear;</div><div class="line">  <span class="attribute">opacity</span>: <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">input</span> &#123;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">18px</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#2980b9</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#f7f7f7</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">13px</span> <span class="number">13px</span> <span class="number">13px</span> <span class="number">20px</span>;</div><div class="line">  <span class="attribute">box-sizing</span>: border-box;</div><div class="line">  <span class="attribute">border</span>: <span class="number">3px</span> solid <span class="built_in">rgba</span>(0, 0, 0, 0);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:focus</span>&#123;</div><div class="line">  <span class="attribute">background</span>: <span class="number">#fff</span>;</div><div class="line">  <span class="attribute">border</span>: <span class="number">3px</span> solid <span class="number">#2980b9</span>;</div><div class="line">  <span class="attribute">outline</span>: none;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.fa-plus</span> &#123;</div><div class="line">  <span class="attribute">float</span>: right;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.completed</span> &#123;</div><div class="line">  <span class="attribute">color</span>: gray;</div><div class="line">  <span class="attribute">text-decoration</span>: line-through;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-id">#container</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">360px</span>;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">100px</span> auto;</div><div class="line">  <span class="attribute">background</span>: <span class="number">#f7f7f7</span>;</div><div class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">3px</span> <span class="built_in">rgba</span>(0, 0, 0, 0.5);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Javascript-Code"><a href="#Javascript-Code" class="headerlink" title="Javascript Code"></a>Javascript Code</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Check off specific todos by clicking</span></div><div class="line">$(<span class="string">"ul"</span>).on(<span class="string">"click"</span>, <span class="string">"li"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  $(<span class="keyword">this</span>).toggleClass(<span class="string">"completed"</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//click on x to delete todos</span></div><div class="line">$(<span class="string">"ul"</span>).on(<span class="string">"click"</span>, <span class="string">"span"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">  $(<span class="keyword">this</span>).parent().fadeOut(<span class="number">500</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    $(<span class="keyword">this</span>).remove();</div><div class="line">  &#125;);</div><div class="line">  event.stopPropagation();</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//input</span></div><div class="line">$(<span class="string">"input[type='text']"</span>).keypress(<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">  <span class="keyword">if</span>(event.which === <span class="number">13</span>)&#123;</div><div class="line">    <span class="comment">//grab todo text from input</span></div><div class="line">    <span class="keyword">var</span> todoText = $(<span class="keyword">this</span>).val();</div><div class="line">    $(<span class="keyword">this</span>).val(<span class="string">""</span>);</div><div class="line">    <span class="comment">//create a new li and add to ul</span></div><div class="line">    $(<span class="string">"ul"</span>).append(<span class="string">"&lt;li&gt;"</span> + <span class="string">"&lt;span&gt;&lt;i class='fa fa-trash-o' aria-hidden='true'&gt;&lt;/i&gt;&lt;/span&gt; "</span> + todoText + <span class="string">"&lt;/li&gt;"</span>)</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//click listener plus sign</span></div><div class="line">$(<span class="string">".fa-plus"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  $(<span class="string">"input[type='text']"</span>).fadeToggle();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<script>
+//Check off specific todos by clicking
+$("ul").on("click", "li", function(){
+$(this).toggleClass("completed");
+});
+
+//click on x to delete todos
+$("ul").on("click", "span", function(event){
+$(this).parent().fadeOut(500, function(){
+  $(this).remove();
+});
+event.stopPropagation();
+});
+
+//input
+$("input[type='text']").keypress(function(event){
+if(event.which === 13){
+  //grab todo text from input
+  var todoText = $(this).val();
+  $(this).val("");
+  //create a new li and add to ul
+  $("ul").append("<li>" + "<span><i class='fa fa-trash-o' aria-hidden='true'></i></span> " + todoText + "</li>")
+}
+});
+
+//click listener plus sign
+$(".fa-plus").click(function(){
+$("input[type='text']").fadeToggle();
+});
+</script>
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/javascript/">#javascript</a> <a class="fw3 ph1 dib" href="/tags/todo-app/">#todo app</a> <a class="fw3 ph1 dib" href="/tags/jQuery/">#jQuery</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+<div id="disqus_thread" class="mt5">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="http://i.imgur.com/lafYQ6M.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Wilson Usman">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Wilson and this is my blog.<br>I am a front-end software engineer with a strong HTML/CSS focus.<br> I currently live and work in Toledo, hit me up if you are in the region.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2017/06/28/todolist-app/">To-Do List App</a>
+        </p>
+    
+        <p>
+            <a href="/2017/06/25/javascript-color-game/">RGB Color Game</a>
+        </p>
+    
+        <p>
+            <a href="/2017/06/22/dom-events/">DOM Events</a>
+        </p>
+    
+        <p>
+            <a href="/2017/06/21/dom/">The DOM</a>
+        </p>
+    
+        <p>
+            <a href="/2017/06/20/forEach-method/">Movies DB</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://twitter.com/wilsonusmanjr" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://twitter.com/wilsonusmanjr" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="mailto:usmanwilson@gmail.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                Copyright &copy; 2017. All right reserved | Powered by <a class="link dim white" href="https://hexo.io/">Hexo</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'teachmejavascript';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+</body>
+
+</html>
